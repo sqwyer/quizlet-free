@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "puppeteer": "^19.3.0"
+  },
+  "name": "quizlet-fetch",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "devDependencies": {},
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
