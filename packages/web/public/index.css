@@ -10,6 +10,11 @@
 body {
     font-family: 'Hurme Geometric Sans 4',-apple-system,BlinkMacSystemFont,sans-serif;
     background: #f6f7fb;
+    color: #586380;
+}
+
+h1 {
+    color: #303545;
 }
 
 nav {
@@ -164,12 +169,12 @@ button.btn:hover {
 }
 
 a.link {
-    color: #aaa;
+    color: #586380;
     text-decoration: underline;
 }
 
 a.link:hover {
-    color: #777
+    color: #303545;
 }
 
 .seperate {

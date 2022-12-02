@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quizlet Free</title>
     <link rel="stylesheet" href="public/index.css">
+    <link rel="stylesheet" href="public/spinner.css">
+    <link rel="stylesheet" href="public/study.css">
 </head>
 <body>
     <nav>
@@ -18,5 +20,14 @@
             </a>
         </div>
     </nav>
+    <div id="content">
+        <br />
+        <div id="spinner-container">
+            <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+        </div>
+    </div>
+
+    <script src="public/js/factory.js"></script>
+    <script src="public/js/study.js"></script>
 </body>
 </html>

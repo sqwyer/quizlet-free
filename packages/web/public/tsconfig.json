@@ -1,5 +1,7 @@
 {
     "compilerOptions": {
+        "jsx": "react",
+        "jsxFactory": "MyFactory.createElement",
         "rootDir": "./src",
         "outDir": "./js",
         "module": "ES2020",
