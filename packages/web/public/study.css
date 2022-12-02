@@ -36,3 +36,91 @@
 .game:hover {
     border-bottom: 4px solid #dbdfff;
 }
+
+.btn.hollow {
+    border: 1px solid #ccc;
+    background: transparent!important;
+    color: #545864;
+    cursor: pointer;
+    transition: 0.1s ease;
+    height: 2rem;
+    width: 2rem;
+    font-size: 1.5rem;
+    font-weight: 100;
+    background: #f1f3f8;
+}
+
+.btn.hollow:hover {
+    background: #edeff4!important;
+}
+
+nav #game-label {
+    position: relative;
+    font-family: 'Open Sans';
+    font-weight: 600;
+}
+
+nav #game-label .label {
+    padding: .5rem .25rem;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+}
+
+nav #game-label .label img {
+    height: 1rem;
+    filter: invert(40%) sepia(8%) saturate(1472%) hue-rotate(186deg) brightness(90%) contrast(87%);
+}
+
+nav #game-label .dropdown img {
+    height: 1rem;
+    filter: invert(27%) sepia(90%) saturate(2918%) hue-rotate(230deg) brightness(101%) contrast(105%);
+}
+
+nav #game-label .label:hover {
+    background: #edeff4;
+}
+
+nav #game-label .dropdown {
+    position: absolute;
+    background-color: #fff;
+    color: #545864;
+    top: 100%;
+    display: none;
+    border: 1px solid #edeff4;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+nav #game-label .dropdown.shown {
+    display: initial;
+}
+
+nav #game-label .dropdown .dropdown-section {
+    font-size: .85rem;
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+    display: flex;
+    flex-direction: column;
+}
+
+nav #game-label .dropdown .dropdown-section span {
+    padding: .75rem 3rem;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    gap: .75rem;
+    align-items: center;
+    justify-content: left;
+    min-width: 15rem;
+    font-weight: bold;
+}
+nav #game-label .dropdown .dropdown-section:not(:first-child) {
+    border-top: 1px solid #edeff4;
+} 
+nav #game-label .dropdown .dropdown-section span:hover {
+    background: #f9fafd;
+}
