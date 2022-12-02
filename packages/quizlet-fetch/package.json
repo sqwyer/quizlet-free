@@ -3,14 +3,15 @@
     "puppeteer": "^19.3.0"
   },
   "name": "quizlet-fetch",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "main": "dist/index.js",
+  "types": "./index.d.ts",
   "devDependencies": {},
   "scripts": {
     "build": "tsc"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  "author": "Sawyer Bivens",
+  "license": "MIT",
+  "description": "Fetch Studyset info from Quizlet with webscraping."
 }

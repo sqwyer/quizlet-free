@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizlet Free</title>
+    <link rel="stylesheet" href="public/index.css">
+</head>
+<body>
+    <nav>
+        <a id="title" href="/">
+            Quizlet Free
+        </a>
+        <div id="right">
+            <a href="https://github.com/sqwyer/quizlet-free" id="github-link" target="_blank">
+                <img src="public/github.png">
+            </a>
+        </div>
+    </nav>
+
+    <form class="form" action="/study">
+        <h2>Load a studyset</h2>
+        <div class="field">
+            <input type="url" name="url" id="url" placeholder=" ">
+            <label for="url">URL</label>
+        </div>
+        <button class="btn" type="submit">
+            <span>Go</span>
+            <span>
+                <img src="public/right-arrow.png" />
+            </span>
+        </button>
+        <div class="row seperate">
+            <a href="#" class="link">Need help?</a>
+        </div>
+    </form>
+    
+    <script>
+        function send() {
+            window.open(
+                document.getElementById('url').value,
+                '_self'
+            )
+        }
+    </script>
+</body>
+</html>
