@@ -180,3 +180,8 @@ a.link:hover {
 .seperate {
     margin-top: .5rem;
 }
+
+.semibold {
+    font-family: 'Open Sans';
+    font-weight: 500;
+}

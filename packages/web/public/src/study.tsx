@@ -37,39 +37,41 @@ function TestGame() {
 
 function Game({game, studyset, url}: {game: Game, studyset: StudySet, url: string}) {
     return (
-        <nav>
-            <div id="game-label" onclick={() => document.getElementById('game-dropdown').classList.toggle('shown')}>
-                <div className="label">
-                    <span>{game}</span>
-                    <span>
-                        <img src="public/chevron-down.png" />
-                    </span>
-                </div>
-                <div className="dropdown" id="game-dropdown">
-                    <div>
-                        <div className="dropdown-section">
-                            <span>
-                                <img src="public/learn.png" />
-                                <p>Learn</p>
-                            </span>
-                            <span>
-                                <img src="public/test.png" />
-                                <p>Test</p>
-                            </span>
-                        </div>
-                        <div className="dropdown-section">
-                            <span>Home</span>
+        <div>
+            <nav>
+                <div id="game-label" onclick={() => document.getElementById('game-dropdown').classList.toggle('shown')}>
+                    <div className="label">
+                        <span>{game}</span>
+                        <span>
+                            <img src="public/chevron-down.png" />
+                        </span>
+                    </div>
+                    <div className="dropdown" id="game-dropdown">
+                        <div>
+                            <div className="dropdown-section">
+                                <span>
+                                    <img src="public/learn.png" onclick={() => populate(Game, {game: 'Learn', studyset, url})}/>
+                                    <p>Learn</p>
+                                </span>
+                                <span onclick={() => populate(Game, {game: 'Test', studyset, url})}>
+                                    <img src="public/test.png" />
+                                    <p>Test</p>
+                                </span>
+                            </div>
+                            <div className="dropdown-section" onclick={() => {populate(Study, {studyset, url})}}>
+                                <span>Home</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div id="right">
-                <button class="btn hollow" onclick={() => {populate(Study, {studyset, url})}}>
-                    &times;
-                </button>
-            </div>
+                <div id="right">
+                    <button class="btn hollow" onclick={() => {populate(Study, {studyset, url})}}>
+                        &times;
+                    </button>
+                </div>
+            </nav>
             {game == "Learn" ? LearnGame() : TestGame()}
-        </nav>
+        </div>
     )
 }
 
@@ -95,14 +97,14 @@ function Study({studyset, url}: {studyset: StudySet, url: string}) {
             <div className="studyset">
                 <h1>{studyset.title}</h1>
                 <div className="row">
-                    <p>{studyset.cards.length} cards</p>
+                    <p className="semibold">{studyset.cards.length} cards</p>
                     <a href={url} target="_blank" className="link">Open in Quizlet</a>
                 </div>
                 <div className="row nav">
                     <div className="game" onclick={() => {populate(Game, {game: 'Learn', studyset, url})}}>
                         <span>Learn</span>
                     </div>
-                    <div className="game">
+                    <div className="game"  onclick={() => {populate(Game, {game: 'Test', studyset, url})}}>
                         <span>Test</span>
                     </div>
                 </div>
